@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -43,13 +44,21 @@ public class Main {
         collectModified.forEach(System.out::println);
 
 
-        //zad3
-        //zwroc osoby z druzyny pierscienia ktore w imienu maja literke F/f
-
-        //zad4
-        //zmodyfikuj imiona osob z druzyny tak zeby byly pisane duzymi literami
 
 
+
+
+        List<List<String>> names = Arrays.asList(
+                Arrays.asList("Robert","piotrowski"),
+                Arrays.asList("bob","piotrowski"));
+
+
+        List<String> collect = names
+                .stream()
+                .flatMap(list -> list.stream())
+                .collect(Collectors.toList());
+
+        collect.forEach(p -> System.out.println(p));
     }
 
 }
