@@ -42,6 +42,14 @@ public class Main {
                 .collect(Collectors.toList());
         collectModified.forEach(System.out::println);
 
+
+        //zad3
+        //zwroc osoby z druzyny pierscienia ktore w imienu maja literke F/f
+
+        //zad4
+        //zmodyfikuj imiona osob z druzyny tak zeby byly pisane duzymi literami
+
+
     }
 
 }
