@@ -18,7 +18,9 @@ public class Main {
         teammateList.add(teammate5);
 
 
-
+        //zad1 Zwroc listę osob ktore nie maja pierscienia
+        //zad2 Zwroc liste zmodyfikowanych osob z wzgledu na to czy maja pierscien
+        //jezeli maja dopisz do imienia - have ring w przeciwnym wypadku does not have rin
     }
 
 }
