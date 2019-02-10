@@ -1,5 +1,13 @@
 public class Teammate {
 
+    @Override
+    public String toString() {
+        return "Teammate{" +
+                "name='" + name + '\'' +
+                ", hasRring=" + hasRring +
+                '}';
+    }
+
     private String name;
     private boolean hasRring;
 

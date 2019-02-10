@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -19,8 +20,28 @@ public class Main {
 
 
         //zad1 Zwroc listę osob ktore nie maja pierscienia
+        List<Teammate> collectPersonWithoutRing = teammateList
+                .stream()
+                .filter(person -> !person.isHasRring())
+                .collect(Collectors.toList());
+        //collectPersonWithoutRing.forEach(System.out::println);
+
+
         //zad2 Zwroc liste zmodyfikowanych osob z wzgledu na to czy maja pierscien
         //jezeli maja dopisz do imienia - have ring w przeciwnym wypadku does not have rin
+
+        List<Teammate> collectModified = teammateList
+                .stream()
+                .map(person -> {
+                    if (person.isHasRring()) {
+                        person.setName(person.getName() + "has ring");
+                    } else person.setName(person.getName() + "does not has ring");
+
+                    return person;
+                })
+                .collect(Collectors.toList());
+        collectModified.forEach(System.out::println);
+
     }
 
 }
